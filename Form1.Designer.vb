@@ -35,30 +35,31 @@ Partial Class Form1
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnNomesGridToList = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.btnLimpaList = New System.Windows.Forms.Button()
-        Me.btnContaNomesList = New System.Windows.Forms.Button()
-        Me.btnEliminaProdutoLista = New System.Windows.Forms.Button()
-        Me.txtEliminaProdutoLista = New System.Windows.Forms.TextBox()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txtContaNomesList = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.txtEliminaProdutoLista = New System.Windows.Forms.TextBox()
+        Me.btnEliminaProdutoLista = New System.Windows.Forms.Button()
+        Me.btnContaNomesList = New System.Windows.Forms.Button()
+        Me.btnLimpaList = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnAtualizaLinha = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtContaProdutos = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -121,6 +122,7 @@ Partial Class Form1
         Me.txtRemoverSelecionado.Name = "txtRemoverSelecionado"
         Me.txtRemoverSelecionado.Size = New System.Drawing.Size(155, 20)
         Me.txtRemoverSelecionado.TabIndex = 4
+        Me.txtRemoverSelecionado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnContar
         '
@@ -190,16 +192,16 @@ Partial Class Form1
         Me.Panel4.Size = New System.Drawing.Size(1002, 34)
         Me.Panel4.TabIndex = 11
         '
-        'RadioButton1
+        'RadioButton3
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(108, 9)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(141, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Todos da BD para a grid"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(796, 9)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(141, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Só o nome dos Produtos"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -211,6 +213,17 @@ Partial Class Form1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Da BD para a Grid, apenas com quantidade zero"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(108, 9)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(141, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Todos da BD para a grid"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'Panel5
         '
@@ -227,60 +240,6 @@ Partial Class Form1
         Me.Panel5.Size = New System.Drawing.Size(444, 368)
         Me.Panel5.TabIndex = 12
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 14)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(237, 342)
-        Me.ListBox1.TabIndex = 13
-        '
-        'btnLimpaList
-        '
-        Me.btnLimpaList.Location = New System.Drawing.Point(267, 219)
-        Me.btnLimpaList.Name = "btnLimpaList"
-        Me.btnLimpaList.Size = New System.Drawing.Size(160, 40)
-        Me.btnLimpaList.TabIndex = 14
-        Me.btnLimpaList.Text = "Limpar a ListBox"
-        Me.btnLimpaList.UseVisualStyleBackColor = True
-        '
-        'btnContaNomesList
-        '
-        Me.btnContaNomesList.Location = New System.Drawing.Point(267, 95)
-        Me.btnContaNomesList.Name = "btnContaNomesList"
-        Me.btnContaNomesList.Size = New System.Drawing.Size(160, 40)
-        Me.btnContaNomesList.TabIndex = 15
-        Me.btnContaNomesList.Text = "Contar o Nomes"
-        Me.btnContaNomesList.UseVisualStyleBackColor = True
-        '
-        'btnEliminaProdutoLista
-        '
-        Me.btnEliminaProdutoLista.Location = New System.Drawing.Point(267, 333)
-        Me.btnEliminaProdutoLista.Name = "btnEliminaProdutoLista"
-        Me.btnEliminaProdutoLista.Size = New System.Drawing.Size(160, 23)
-        Me.btnEliminaProdutoLista.TabIndex = 16
-        Me.btnEliminaProdutoLista.Text = "Elimina este da Lista"
-        Me.btnEliminaProdutoLista.UseVisualStyleBackColor = True
-        '
-        'txtEliminaProdutoLista
-        '
-        Me.txtEliminaProdutoLista.Location = New System.Drawing.Point(267, 307)
-        Me.txtEliminaProdutoLista.Name = "txtEliminaProdutoLista"
-        Me.txtEliminaProdutoLista.Size = New System.Drawing.Size(160, 20)
-        Me.txtEliminaProdutoLista.TabIndex = 17
-        Me.txtEliminaProdutoLista.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(796, 9)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(141, 17)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Só o nome dos Produtos"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
         'txtContaNomesList
         '
         Me.txtContaNomesList.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -291,6 +250,49 @@ Partial Class Form1
         Me.txtContaNomesList.Size = New System.Drawing.Size(160, 40)
         Me.txtContaNomesList.TabIndex = 18
         Me.txtContaNomesList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(12, 14)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(237, 342)
+        Me.ListBox1.TabIndex = 13
+        '
+        'txtEliminaProdutoLista
+        '
+        Me.txtEliminaProdutoLista.Location = New System.Drawing.Point(267, 307)
+        Me.txtEliminaProdutoLista.Name = "txtEliminaProdutoLista"
+        Me.txtEliminaProdutoLista.Size = New System.Drawing.Size(160, 20)
+        Me.txtEliminaProdutoLista.TabIndex = 17
+        Me.txtEliminaProdutoLista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnEliminaProdutoLista
+        '
+        Me.btnEliminaProdutoLista.Location = New System.Drawing.Point(267, 333)
+        Me.btnEliminaProdutoLista.Name = "btnEliminaProdutoLista"
+        Me.btnEliminaProdutoLista.Size = New System.Drawing.Size(160, 23)
+        Me.btnEliminaProdutoLista.TabIndex = 16
+        Me.btnEliminaProdutoLista.Text = "Elimina este da Lista"
+        Me.btnEliminaProdutoLista.UseVisualStyleBackColor = True
+        '
+        'btnContaNomesList
+        '
+        Me.btnContaNomesList.Location = New System.Drawing.Point(267, 95)
+        Me.btnContaNomesList.Name = "btnContaNomesList"
+        Me.btnContaNomesList.Size = New System.Drawing.Size(160, 40)
+        Me.btnContaNomesList.TabIndex = 15
+        Me.btnContaNomesList.Text = "Contar o Nomes"
+        Me.btnContaNomesList.UseVisualStyleBackColor = True
+        '
+        'btnLimpaList
+        '
+        Me.btnLimpaList.Location = New System.Drawing.Point(267, 219)
+        Me.btnLimpaList.Name = "btnLimpaList"
+        Me.btnLimpaList.Size = New System.Drawing.Size(160, 40)
+        Me.btnLimpaList.TabIndex = 14
+        Me.btnLimpaList.Text = "Limpar a ListBox"
+        Me.btnLimpaList.UseVisualStyleBackColor = True
         '
         'Panel6
         '
@@ -321,6 +323,15 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(542, 61)
         Me.Panel7.TabIndex = 14
         '
+        'txtContaProdutos
+        '
+        Me.txtContaProdutos.Location = New System.Drawing.Point(487, 11)
+        Me.txtContaProdutos.Multiline = True
+        Me.txtContaProdutos.Name = "txtContaProdutos"
+        Me.txtContaProdutos.Size = New System.Drawing.Size(38, 38)
+        Me.txtContaProdutos.TabIndex = 1
+        Me.txtContaProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -331,18 +342,10 @@ Partial Class Form1
         Me.Button1.Text = "Conta os Produtos Diferentes que estão na Base de Dados"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'txtContaProdutos
-        '
-        Me.txtContaProdutos.Location = New System.Drawing.Point(487, 11)
-        Me.txtContaProdutos.Multiline = True
-        Me.txtContaProdutos.Name = "txtContaProdutos"
-        Me.txtContaProdutos.Size = New System.Drawing.Size(38, 38)
-        Me.txtContaProdutos.TabIndex = 1
-        Me.txtContaProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel8.Controls.Add(Me.Button2)
         Me.Panel8.Controls.Add(Me.Label4)
         Me.Panel8.Controls.Add(Me.Label3)
         Me.Panel8.Controls.Add(Me.Label2)
@@ -356,77 +359,87 @@ Partial Class Form1
         Me.Panel8.Size = New System.Drawing.Size(542, 205)
         Me.Panel8.TabIndex = 15
         '
-        'TextBox1
+        'Label4
         '
-        Me.TextBox1.Location = New System.Drawing.Point(20, 99)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(124, 27)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(165, 99)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(124, 27)
-        Me.TextBox2.TabIndex = 0
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(310, 99)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(124, 27)
-        Me.TextBox3.TabIndex = 0
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(455, 99)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(69, 27)
-        Me.TextBox4.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 78)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Nome do Produto"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(187, 77)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Fornecedor"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(372, 80)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 17)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Preço"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(334, 77)
+        Me.Label3.Location = New System.Drawing.Point(109, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Categoria"
         '
-        'Label4
+        'Label2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(421, 78)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 17)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Preço"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(347, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 17)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Fornecedor"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(78, 14)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(119, 17)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Nome do Produto"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(285, 101)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox4.TabIndex = 0
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(37, 101)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox3.TabIndex = 0
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(285, 35)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox2.TabIndex = 0
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(37, 35)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(37, 144)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(461, 49)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Inserir estes dados nas 3 Tabelas da Base de Dados"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -502,4 +515,5 @@ Partial Class Form1
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
 End Class
