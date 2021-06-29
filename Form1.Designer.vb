@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -39,22 +40,43 @@ Partial Class Form1
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.btnLimpaList = New System.Windows.Forms.Button()
-        Me.btnContaNomesLisa = New System.Windows.Forms.Button()
-        Me.btnEliminaSelecLista = New System.Windows.Forms.Button()
-        Me.txtEliminaDaLista = New System.Windows.Forms.TextBox()
+        Me.btnContaNomesList = New System.Windows.Forms.Button()
+        Me.btnEliminaProdutoLista = New System.Windows.Forms.Button()
+        Me.txtEliminaProdutoLista = New System.Windows.Forms.TextBox()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.txtContaNomesList = New System.Windows.Forms.TextBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btnAtualizaLinha = New System.Windows.Forms.Button()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtContaProdutos = New System.Windows.Forms.TextBox()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvTeste1
         '
+        Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTeste1.Location = New System.Drawing.Point(42, 73)
+        Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
+        Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
         Me.dgvTeste1.Name = "dgvTeste1"
-        Me.dgvTeste1.Size = New System.Drawing.Size(1002, 294)
+        Me.dgvTeste1.Size = New System.Drawing.Size(1002, 284)
         Me.dgvTeste1.TabIndex = 0
         '
         'btnBuscarProdutos
@@ -114,7 +136,7 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Controls.Add(Me.btnBuscarProdutos)
         Me.Panel1.Controls.Add(Me.btnLimparGrid)
-        Me.Panel1.Location = New System.Drawing.Point(42, 23)
+        Me.Panel1.Location = New System.Drawing.Point(21, 21)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(347, 44)
         Me.Panel1.TabIndex = 7
@@ -124,7 +146,7 @@ Partial Class Form1
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Controls.Add(Me.btnContar)
         Me.Panel2.Controls.Add(Me.txtContar)
-        Me.Panel2.Location = New System.Drawing.Point(852, 23)
+        Me.Panel2.Location = New System.Drawing.Point(831, 21)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(192, 44)
         Me.Panel2.TabIndex = 8
@@ -134,16 +156,16 @@ Partial Class Form1
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel3.Controls.Add(Me.RemoverSelecionado)
         Me.Panel3.Controls.Add(Me.txtRemoverSelecionado)
-        Me.Panel3.Location = New System.Drawing.Point(483, 22)
+        Me.Panel3.Location = New System.Drawing.Point(462, 20)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(269, 45)
         Me.Panel3.TabIndex = 9
         '
         'btnNomesGridToList
         '
-        Me.btnNomesGridToList.Location = New System.Drawing.Point(229, 460)
+        Me.btnNomesGridToList.Location = New System.Drawing.Point(267, 14)
         Me.btnNomesGridToList.Name = "btnNomesGridToList"
-        Me.btnNomesGridToList.Size = New System.Drawing.Size(160, 23)
+        Me.btnNomesGridToList.Size = New System.Drawing.Size(160, 40)
         Me.btnNomesGridToList.TabIndex = 10
         Me.btnNomesGridToList.Text = "Nomes da Grid para a ListBox"
         Me.btnNomesGridToList.UseVisualStyleBackColor = True
@@ -151,9 +173,10 @@ Partial Class Form1
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel4.Controls.Add(Me.RadioButton3)
         Me.Panel4.Controls.Add(Me.RadioButton2)
         Me.Panel4.Controls.Add(Me.RadioButton1)
-        Me.Panel4.Location = New System.Drawing.Point(42, 373)
+        Me.Panel4.Location = New System.Drawing.Point(21, 371)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1002, 34)
         Me.Panel4.TabIndex = 11
@@ -161,18 +184,18 @@ Partial Class Form1
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(441, 9)
+        Me.RadioButton1.Location = New System.Drawing.Point(108, 9)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(141, 17)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Todos da BG para a grid"
+        Me.RadioButton1.Text = "Todos da BD para a grid"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(730, 9)
+        Me.RadioButton2.Location = New System.Drawing.Point(383, 9)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(255, 17)
         Me.RadioButton2.TabIndex = 1
@@ -182,72 +205,158 @@ Partial Class Form1
         '
         'Panel5
         '
-        Me.Panel5.Location = New System.Drawing.Point(497, 413)
+        Me.Panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel5.Controls.Add(Me.txtContaNomesList)
+        Me.Panel5.Controls.Add(Me.ListBox1)
+        Me.Panel5.Controls.Add(Me.txtEliminaProdutoLista)
+        Me.Panel5.Controls.Add(Me.btnEliminaProdutoLista)
+        Me.Panel5.Controls.Add(Me.btnNomesGridToList)
+        Me.Panel5.Controls.Add(Me.btnContaNomesList)
+        Me.Panel5.Controls.Add(Me.btnLimpaList)
+        Me.Panel5.Location = New System.Drawing.Point(21, 419)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(547, 100)
+        Me.Panel5.Size = New System.Drawing.Size(444, 368)
         Me.Panel5.TabIndex = 12
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(42, 413)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 14)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(181, 368)
+        Me.ListBox1.Size = New System.Drawing.Size(237, 342)
         Me.ListBox1.TabIndex = 13
         '
         'btnLimpaList
         '
-        Me.btnLimpaList.Location = New System.Drawing.Point(229, 490)
+        Me.btnLimpaList.Location = New System.Drawing.Point(267, 219)
         Me.btnLimpaList.Name = "btnLimpaList"
-        Me.btnLimpaList.Size = New System.Drawing.Size(160, 23)
+        Me.btnLimpaList.Size = New System.Drawing.Size(160, 40)
         Me.btnLimpaList.TabIndex = 14
         Me.btnLimpaList.Text = "Limpar a ListBox"
         Me.btnLimpaList.UseVisualStyleBackColor = True
         '
-        'btnContaNomesLisa
+        'btnContaNomesList
         '
-        Me.btnContaNomesLisa.Location = New System.Drawing.Point(229, 519)
-        Me.btnContaNomesLisa.Name = "btnContaNomesLisa"
-        Me.btnContaNomesLisa.Size = New System.Drawing.Size(160, 23)
-        Me.btnContaNomesLisa.TabIndex = 15
-        Me.btnContaNomesLisa.Text = "Contar o Nomes"
-        Me.btnContaNomesLisa.UseVisualStyleBackColor = True
+        Me.btnContaNomesList.Location = New System.Drawing.Point(267, 95)
+        Me.btnContaNomesList.Name = "btnContaNomesList"
+        Me.btnContaNomesList.Size = New System.Drawing.Size(160, 40)
+        Me.btnContaNomesList.TabIndex = 15
+        Me.btnContaNomesList.Text = "Contar o Nomes"
+        Me.btnContaNomesList.UseVisualStyleBackColor = True
         '
-        'btnEliminaSelecLista
+        'btnEliminaProdutoLista
         '
-        Me.btnEliminaSelecLista.Location = New System.Drawing.Point(229, 627)
-        Me.btnEliminaSelecLista.Name = "btnEliminaSelecLista"
-        Me.btnEliminaSelecLista.Size = New System.Drawing.Size(160, 23)
-        Me.btnEliminaSelecLista.TabIndex = 16
-        Me.btnEliminaSelecLista.Text = "Elimina este da Lista"
-        Me.btnEliminaSelecLista.UseVisualStyleBackColor = True
+        Me.btnEliminaProdutoLista.Location = New System.Drawing.Point(267, 333)
+        Me.btnEliminaProdutoLista.Name = "btnEliminaProdutoLista"
+        Me.btnEliminaProdutoLista.Size = New System.Drawing.Size(160, 23)
+        Me.btnEliminaProdutoLista.TabIndex = 16
+        Me.btnEliminaProdutoLista.Text = "Elimina este da Lista"
+        Me.btnEliminaProdutoLista.UseVisualStyleBackColor = True
         '
-        'txtEliminaDaLista
+        'txtEliminaProdutoLista
         '
-        Me.txtEliminaDaLista.Location = New System.Drawing.Point(229, 601)
-        Me.txtEliminaDaLista.Name = "txtEliminaDaLista"
-        Me.txtEliminaDaLista.Size = New System.Drawing.Size(160, 20)
-        Me.txtEliminaDaLista.TabIndex = 17
-        Me.txtEliminaDaLista.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtEliminaProdutoLista.Location = New System.Drawing.Point(267, 307)
+        Me.txtEliminaProdutoLista.Name = "txtEliminaProdutoLista"
+        Me.txtEliminaProdutoLista.Size = New System.Drawing.Size(160, 20)
+        Me.txtEliminaProdutoLista.TabIndex = 17
+        Me.txtEliminaProdutoLista.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(796, 9)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(141, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Só o nome dos Produtos"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'txtContaNomesList
+        '
+        Me.txtContaNomesList.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContaNomesList.Location = New System.Drawing.Point(267, 141)
+        Me.txtContaNomesList.Multiline = True
+        Me.txtContaNomesList.Name = "txtContaNomesList"
+        Me.txtContaNomesList.ReadOnly = True
+        Me.txtContaNomesList.Size = New System.Drawing.Size(160, 40)
+        Me.txtContaNomesList.TabIndex = 18
+        Me.txtContaNomesList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel6.Controls.Add(Me.btnAtualizaLinha)
+        Me.Panel6.Location = New System.Drawing.Point(481, 419)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(542, 68)
+        Me.Panel6.TabIndex = 13
+        '
+        'btnAtualizaLinha
+        '
+        Me.btnAtualizaLinha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAtualizaLinha.Location = New System.Drawing.Point(20, 14)
+        Me.btnAtualizaLinha.Name = "btnAtualizaLinha"
+        Me.btnAtualizaLinha.Size = New System.Drawing.Size(505, 40)
+        Me.btnAtualizaLinha.TabIndex = 0
+        Me.btnAtualizaLinha.Text = "Atualiza a linha Selecionada da Grid na Base de Dados"
+        Me.btnAtualizaLinha.UseVisualStyleBackColor = True
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel7.Controls.Add(Me.txtContaProdutos)
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Location = New System.Drawing.Point(481, 504)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(542, 61)
+        Me.Panel7.TabIndex = 14
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(20, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(451, 40)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Conta os Produtos Diferentes que estão na Base de Dados"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtContaProdutos
+        '
+        Me.txtContaProdutos.Location = New System.Drawing.Point(487, 11)
+        Me.txtContaProdutos.Multiline = True
+        Me.txtContaProdutos.Name = "txtContaProdutos"
+        Me.txtContaProdutos.Size = New System.Drawing.Size(38, 38)
+        Me.txtContaProdutos.TabIndex = 1
+        Me.txtContaProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel8.Location = New System.Drawing.Point(481, 582)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(542, 205)
+        Me.Panel8.TabIndex = 15
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1081, 833)
-        Me.Controls.Add(Me.txtEliminaDaLista)
-        Me.Controls.Add(Me.btnEliminaSelecLista)
-        Me.Controls.Add(Me.btnContaNomesLisa)
-        Me.Controls.Add(Me.btnLimpaList)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.btnNomesGridToList)
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.ClientSize = New System.Drawing.Size(1043, 804)
+        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dgvTeste1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VB - Acesso a Base de Dados - Teste 1"
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -257,8 +366,12 @@ Partial Class Form1
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -279,7 +392,15 @@ Partial Class Form1
     Friend WithEvents Panel5 As Panel
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents btnLimpaList As Button
-    Friend WithEvents btnContaNomesLisa As Button
-    Friend WithEvents btnEliminaSelecLista As Button
-    Friend WithEvents txtEliminaDaLista As TextBox
+    Friend WithEvents btnContaNomesList As Button
+    Friend WithEvents btnEliminaProdutoLista As Button
+    Friend WithEvents txtEliminaProdutoLista As TextBox
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents txtContaNomesList As TextBox
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents btnAtualizaLinha As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents txtContaProdutos As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel8 As Panel
 End Class
