@@ -82,4 +82,5 @@
         ligacao.SSQL = "Select NomeDoProduto from Produtos; "
         dgvTeste1.DataSource = ligacao.BuscarDados()
     End Sub
+
 End Class
