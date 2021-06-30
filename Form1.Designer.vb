@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -74,14 +74,14 @@ Partial Class Form1
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -282,7 +282,7 @@ Partial Class Form1
         Me.btnContaNomesList.Name = "btnContaNomesList"
         Me.btnContaNomesList.Size = New System.Drawing.Size(160, 40)
         Me.btnContaNomesList.TabIndex = 15
-        Me.btnContaNomesList.Text = "Contar o Nomes"
+        Me.btnContaNomesList.Text = "Contar os Nomes"
         Me.btnContaNomesList.UseVisualStyleBackColor = True
         '
         'btnLimpaList

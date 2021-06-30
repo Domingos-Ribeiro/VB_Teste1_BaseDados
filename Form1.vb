@@ -41,21 +41,12 @@
 
     Private Sub btnNomesGridToList_Click(sender As Object, e As EventArgs) Handles btnNomesGridToList.Click
 
+
         Dim ligacao As New Conectar
-        ligacao.SSQL = "Select NomeDoProduto from Produtos"
+        ligacao.SSQL = "Select * from Produtos; "
         ListBox1.DataSource = ligacao.BuscarDados()
 
-
-
-        '**********************  Este código passa só o id dos Produtos  ********************************
-        'Esta linha não faz falta ---> Dim colunaProduto As String = dgvTeste1.Columns(1).ToString
-        'Dim dadosDaGrid As Integer = dgvTeste1.Rows.Count - 1
-
-        'For index = 1 To dadosDaGrid
-
-        '    ListBox1.Items.Add(index)
-
-        'Next
+        ListBox1.ValueMember = "NomeDoProduto"
 
     End Sub
 
@@ -83,4 +74,36 @@
         dgvTeste1.DataSource = ligacao.BuscarDados()
     End Sub
 
+    Private Sub btnContaNomesList_Click(sender As Object, e As EventArgs) Handles btnContaNomesList.Click
+        txtContaNomesList.Text = (ListBox1.Items.Count())
+    End Sub
+
+    Private Sub btnLimpaList_Click(sender As Object, e As EventArgs) Handles btnLimpaList.Click
+
+        ListBox1.Items.Clear()
+
+        'ListBox1.Items.Clear()
+        'ListBox1.Hide()
+    End Sub
+
+    Private Sub btnEliminaProdutoLista_Click(sender As Object, e As EventArgs) Handles btnEliminaProdutoLista.Click
+        Dim nome As String = txtEliminaProdutoLista.Text '.ToUpper() 
+        Dim dadosDaGrid As Integer = ListBox1.Items.Count - 1
+        Try
+
+            For i = 0 To dadosDaGrid
+                'If dgvTeste1(1, i).Value.ToString().ToUpper() = nomeProduto Then
+                If ListBox1.SelectedItem.ToString() = nome Then
+                    ListBox1.SelectedItem.RemoveAt(i)
+                End If
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show("Removeu com Sucesso o produto --->  " + nome)
+        End Try
+
+
+
+
+    End Sub
 End Class
