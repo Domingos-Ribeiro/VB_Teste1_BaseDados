@@ -23,6 +23,12 @@
 
         Dim nomeProduto As String = txtRemoverSelecionado.Text '.ToUpper() 
         Dim dadosDaGrid As Integer = dgvTeste1.Rows.Count - 1
+
+        If txtRemoverSelecionado.Text = "" Then
+            MessageBox.Show("Por favor introduza o nome de um produto na Caixa de Texto")
+            Return
+        End If
+
         Try
 
             For i = 0 To dadosDaGrid
@@ -33,7 +39,7 @@
             Next
 
         Catch ex As Exception
-            MessageBox.Show("Removeu com Sucesso o produto --->  " + nomeProduto)
+            MessageBox.Show("Removeu com Sucesso o produto " + "(" + nomeProduto + ")")
         End Try
 
 
@@ -41,12 +47,26 @@
 
     Private Sub btnNomesGridToList_Click(sender As Object, e As EventArgs) Handles btnNomesGridToList.Click
 
+        Dim nomeProduto As String = ""
+        Dim dadosDaGrid As Integer = dgvTeste1.Rows.Count - 1
 
-        Dim ligacao As New Conectar
-        ligacao.SSQL = "Select * from Produtos; "
-        ListBox1.DataSource = ligacao.BuscarDados()
 
-        ListBox1.ValueMember = "NomeDoProduto"
+        Try
+
+            For i = 0 To dadosDaGrid
+                nomeProduto = dgvTeste1(1, i).Value.ToString
+                ListBox1.Items.Add(nomeProduto)
+            Next
+
+        Catch ex As Exception
+            ' Poderia colocar aqui uma menssagem qualquer.
+        End Try
+
+        'Dim ligacao As New Conectar
+        'ligacao.SSQL = "Select * from Produtos; "
+        'ListBox1.DataSource = ligacao.BuscarDados()
+
+        'ListBox1.ValueMember = "NomeDoProduto"
 
     End Sub
 
@@ -64,7 +84,7 @@
         dgvTeste1.Columns("NomeDoProduto").Width = 159
         Dim ligacao As New Conectar
         ligacao.SSQL = "Select * from Produtos where Existências = '0'"
-        dgvTeste1.DataSource = ligacao.BuscarDados()
+            dgvTeste1.DataSource = ligacao.BuscarDados()
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
@@ -82,25 +102,47 @@
 
         ListBox1.Items.Clear()
 
-        'ListBox1.Items.Clear()
-        'ListBox1.Hide()
     End Sub
 
     Private Sub btnEliminaProdutoLista_Click(sender As Object, e As EventArgs) Handles btnEliminaProdutoLista.Click
-        Dim nome As String = txtEliminaProdutoLista.Text '.ToUpper() 
-        Dim dadosDaGrid As Integer = ListBox1.Items.Count - 1
-        Try
 
-            For i = 0 To dadosDaGrid
-                'If dgvTeste1(1, i).Value.ToString().ToUpper() = nomeProduto Then
-                If ListBox1.SelectedItem.ToString() = nome Then
-                    ListBox1.SelectedItem.RemoveAt(i)
-                End If
-            Next
+        Dim nomeP As String = txtRemoverSelecionado.Text
+        Dim listagem As Integer = ListBox1.Items.Count - 1
 
-        Catch ex As Exception
-            MessageBox.Show("Removeu com Sucesso o produto --->  " + nome)
-        End Try
+
+
+        For i = 0 To listagem
+            If ListBox1.Items(i).ToString() = nomeP Then
+
+                ListBox1.Items.RemoveAt(i)
+
+            End If
+        Next
+
+
+    End Sub
+
+    Private Sub dgvTeste1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTeste1.CellContentClick
+
+    End Sub
+
+    Private Sub btnAtualizaLinha_Click(sender As Object, e As EventArgs) Handles btnAtualizaLinha.Click
+
+        dgvTeste1.DataSource = Nothing
+        dgvTeste1.Rows.Clear()
+
+        Dim obj As New Conectar
+
+        obj.SSQL = "Select count(*) 
+                    From Produtos;"
+
+        dgvTeste1.DataSource = obj.BuscarDados()
+
+        'txtContaProdutosBD.Text = dgvTeste1(0, 0).Value.ToString()
+
+        obj.SSQL = "Select * from Produtos"
+
+        dgvTeste1.DataSource = obj.BuscarDados()
 
 
 

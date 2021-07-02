@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -51,6 +51,7 @@ Partial Class Form1
         Me.txtContaProdutos = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -59,7 +60,6 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -74,14 +74,14 @@ Partial Class Form1
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -325,7 +325,7 @@ Partial Class Form1
         '
         'txtContaProdutos
         '
-        Me.txtContaProdutos.Location = New System.Drawing.Point(487, 11)
+        Me.txtContaProdutos.Location = New System.Drawing.Point(486, 11)
         Me.txtContaProdutos.Multiline = True
         Me.txtContaProdutos.Name = "txtContaProdutos"
         Me.txtContaProdutos.Size = New System.Drawing.Size(38, 38)
@@ -358,6 +358,16 @@ Partial Class Form1
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(542, 205)
         Me.Panel8.TabIndex = 15
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(20, 144)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(505, 49)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Inserir estes dados nas 3 Tabelas da Base de Dados"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -430,16 +440,6 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(210, 20)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(20, 144)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(505, 49)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Inserir estes dados nas 3 Tabelas da Base de Dados"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '
