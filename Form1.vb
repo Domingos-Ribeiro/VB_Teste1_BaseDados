@@ -140,6 +140,8 @@
 
         'txtContaProdutosBD.Text = dgvTeste1(0, 0).Value.ToString()
 
+        'ERRO'
+
         obj.SSQL = "Select * from Produtos"
 
         dgvTeste1.DataSource = obj.BuscarDados()
