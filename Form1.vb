@@ -153,6 +153,6 @@
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         'Contar todos os prudutos diferentes da base de dados
-        'Os produtos repetido não serão contados
+        'Os produtos repetido não serão contados novamente.
     End Sub
 End Class
