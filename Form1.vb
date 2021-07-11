@@ -106,7 +106,7 @@
 
     Private Sub btnEliminaProdutoLista_Click(sender As Object, e As EventArgs) Handles btnEliminaProdutoLista.Click
 
-        Dim nomeP As String = txtRemoverSelecionado.Text.ToUpper()
+        Dim nomeP As String = txtEliminaProdutoLista.Text.ToUpper()
         Dim listagem As Integer = ListBox1.Items.Count
 
         Try
