@@ -154,7 +154,20 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        'Contar todos os prudutos diferentes da base de dados
-        'Os produtos repetido não serão contados novamente.
+        dgvTeste1.DataSource = Nothing
+        dgvTeste1.Rows.Clear()
+
+        Dim obj As New Conectar
+
+        obj.SSQL = "Select distinct count(*) 
+                    From Produtos;"
+
+        dgvTeste1.DataSource = obj.BuscarDados()
+
+        txtContaProdutos.Text = dgvTeste1(0, 0).Value.ToString()
+
+        obj.SSQL = "Select * from Produtos"
+
+        dgvTeste1.DataSource = obj.BuscarDados()
     End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -74,14 +74,14 @@ Partial Class Form1
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -325,10 +325,11 @@ Partial Class Form1
         '
         'txtContaProdutos
         '
-        Me.txtContaProdutos.Location = New System.Drawing.Point(486, 11)
+        Me.txtContaProdutos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContaProdutos.Location = New System.Drawing.Point(486, 17)
         Me.txtContaProdutos.Multiline = True
         Me.txtContaProdutos.Name = "txtContaProdutos"
-        Me.txtContaProdutos.Size = New System.Drawing.Size(38, 38)
+        Me.txtContaProdutos.Size = New System.Drawing.Size(38, 29)
         Me.txtContaProdutos.TabIndex = 1
         Me.txtContaProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
