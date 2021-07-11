@@ -129,22 +129,23 @@
 
     Private Sub btnAtualizaLinha_Click(sender As Object, e As EventArgs) Handles btnAtualizaLinha.Click
 
-        dgvTeste1.DataSource = Nothing
-        dgvTeste1.Rows.Clear()
-
+        Dim index As Integer = dgvTeste1.CurrentRow.Cells(0).RowIndex
+        Dim ChavePrimaria As Integer = dgvTeste1(0, index).Value
         Dim obj As New Conectar
 
-        obj.SSQL = "Select count(*) 
-                    From Produtos;"
+        obj.SSQL = "Update Produtos SET NomeDoProduto =" + "'" + dgvTeste1(1, index).Value.ToString() + "'" +
+                  ", CódigoDoFornecedor =" + "'" + dgvTeste1(2, index).Value.ToString() + "'" +
+                  ", CódigoDaCategoria = " + " '" + dgvTeste1(3, index).Value.ToString() + "'" +
+                  ", Existências = " + " '" + dgvTeste1(5, index).Value.ToString() + "'" +
+                  ", UnidadesEncomendadas = " + " '" + dgvTeste1(6, index).Value.ToString() + "'" +
+                  ", ExistênciaMínima = " + " '" + dgvTeste1(7, index).Value.ToString() + "'" +
+                  ", Descontinuado = " + " '" + "true" + "'" + " WHERE CódigoDoProduto =" + ChavePrimaria.ToString() + ";"
 
-        dgvTeste1.DataSource = obj.BuscarDados()
 
-        'txtContaProdutosBD.Text = dgvTeste1(0, 0).Value.ToString()
-
-
-
+        obj.BuscarDados()
+        dgvTeste1.DataSource = Nothing
+        dgvTeste1.Rows.Clear()
         obj.SSQL = "Select * from Produtos"
-
         dgvTeste1.DataSource = obj.BuscarDados()
 
 
