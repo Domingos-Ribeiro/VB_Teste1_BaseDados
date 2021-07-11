@@ -170,4 +170,27 @@
 
         dgvTeste1.DataSource = obj.BuscarDados()
     End Sub
+
+    Private Sub btnInserirDados_Click(sender As Object, e As EventArgs) Handles btnInserirDados.Click
+        Dim Descontinuado As Boolean = 1
+        Dim obj As New Conectar
+        obj.SSQL = "Insert into Produtos (NomeDoProduto, CódigoDoFornecedor, CódigoDaCategoria, PreçoUnitário, Descontinuado)
+                        values ('" + txtNomeProduto.Text.ToString() +
+                             "','" + txtNomeFornecedor.Text.ToString() +
+                             "','" + txtCategoria.Text.ToString() +
+                             "','" + txtPreco.Text.ToString() +
+                             "','" + Descontinuado.ToString() + "')"
+
+
+        obj.BuscarDados()
+        dgvTeste1.DataSource = Nothing
+        dgvTeste1.Rows.Clear()
+        obj.SSQL = "Select * from Produtos;"
+        dgvTeste1.DataSource = obj.BuscarDados()
+
+        MessageBox.Show("Dados Inseridos com Sucesso")
+
+    End Sub
+
+
 End Class

@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -51,15 +51,15 @@ Partial Class Form1
         Me.txtContaProdutos = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnInserirDados = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPreco = New System.Windows.Forms.TextBox()
+        Me.txtCategoria = New System.Windows.Forms.TextBox()
+        Me.txtNomeFornecedor = New System.Windows.Forms.TextBox()
+        Me.txtNomeProduto = New System.Windows.Forms.TextBox()
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -74,14 +74,14 @@ Partial Class Form1
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -346,35 +346,35 @@ Partial Class Form1
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel8.Controls.Add(Me.Button2)
+        Me.Panel8.Controls.Add(Me.btnInserirDados)
         Me.Panel8.Controls.Add(Me.Label4)
         Me.Panel8.Controls.Add(Me.Label3)
         Me.Panel8.Controls.Add(Me.Label2)
         Me.Panel8.Controls.Add(Me.Label1)
-        Me.Panel8.Controls.Add(Me.TextBox4)
-        Me.Panel8.Controls.Add(Me.TextBox3)
-        Me.Panel8.Controls.Add(Me.TextBox2)
-        Me.Panel8.Controls.Add(Me.TextBox1)
+        Me.Panel8.Controls.Add(Me.txtPreco)
+        Me.Panel8.Controls.Add(Me.txtCategoria)
+        Me.Panel8.Controls.Add(Me.txtNomeFornecedor)
+        Me.Panel8.Controls.Add(Me.txtNomeProduto)
         Me.Panel8.Location = New System.Drawing.Point(481, 582)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(542, 205)
         Me.Panel8.TabIndex = 15
         '
-        'Button2
+        'btnInserirDados
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(20, 144)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(505, 49)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Inserir estes dados nas 3 Tabelas da Base de Dados"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnInserirDados.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInserirDados.Location = New System.Drawing.Point(20, 144)
+        Me.btnInserirDados.Name = "btnInserirDados"
+        Me.btnInserirDados.Size = New System.Drawing.Size(505, 49)
+        Me.btnInserirDados.TabIndex = 2
+        Me.btnInserirDados.Text = "Inserir estes dados nas 3 Tabelas da Base de Dados"
+        Me.btnInserirDados.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(360, 80)
+        Me.Label4.Location = New System.Drawing.Point(363, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 17)
         Me.Label4.TabIndex = 1
@@ -394,11 +394,11 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(342, 14)
+        Me.Label2.Location = New System.Drawing.Point(327, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 17)
+        Me.Label2.Size = New System.Drawing.Size(116, 17)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Fornecedor"
+        Me.Label2.Text = "Id do Fornecedor"
         '
         'Label1
         '
@@ -410,37 +410,37 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nome do Produto"
         '
-        'TextBox4
+        'txtPreco
         '
-        Me.TextBox4.Location = New System.Drawing.Point(329, 101)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(107, 20)
-        Me.TextBox4.TabIndex = 0
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtPreco.Location = New System.Drawing.Point(329, 101)
+        Me.txtPreco.Name = "txtPreco"
+        Me.txtPreco.Size = New System.Drawing.Size(114, 20)
+        Me.txtPreco.TabIndex = 0
+        Me.txtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox3
+        'txtCategoria
         '
-        Me.TextBox3.Location = New System.Drawing.Point(49, 100)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox3.TabIndex = 0
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtCategoria.Location = New System.Drawing.Point(49, 100)
+        Me.txtCategoria.Name = "txtCategoria"
+        Me.txtCategoria.Size = New System.Drawing.Size(210, 20)
+        Me.txtCategoria.TabIndex = 0
+        Me.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox2
+        'txtNomeFornecedor
         '
-        Me.TextBox2.Location = New System.Drawing.Point(278, 35)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox2.TabIndex = 0
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtNomeFornecedor.Location = New System.Drawing.Point(329, 35)
+        Me.txtNomeFornecedor.Name = "txtNomeFornecedor"
+        Me.txtNomeFornecedor.Size = New System.Drawing.Size(114, 20)
+        Me.txtNomeFornecedor.TabIndex = 0
+        Me.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox1
+        'txtNomeProduto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(49, 35)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtNomeProduto.Location = New System.Drawing.Point(49, 35)
+        Me.txtNomeProduto.Name = "txtNomeProduto"
+        Me.txtNomeProduto.Size = New System.Drawing.Size(210, 20)
+        Me.txtNomeProduto.TabIndex = 0
+        Me.txtNomeProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Form1
         '
@@ -512,9 +512,9 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtPreco As TextBox
+    Friend WithEvents txtCategoria As TextBox
+    Friend WithEvents txtNomeFornecedor As TextBox
+    Friend WithEvents txtNomeProduto As TextBox
+    Friend WithEvents btnInserirDados As Button
 End Class
