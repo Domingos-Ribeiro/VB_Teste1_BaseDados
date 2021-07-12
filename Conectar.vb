@@ -8,6 +8,8 @@ Public Class Conectar
         "user id= sa;" +
         "password=123.Abc.@;"
 
+    'Para aceder a outra instancia é só trocar o caminhho.
+
     Public SSQL As String = "select * from Produtos;"
 
 
