@@ -190,6 +190,8 @@
 
         MessageBox.Show("Dados Inseridos com Sucesso")
 
+        ' Verificar a conexão
+
     End Sub
 
 
