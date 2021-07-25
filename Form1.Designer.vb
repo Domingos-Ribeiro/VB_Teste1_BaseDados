@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -60,6 +60,8 @@ Partial Class Form1
         Me.txtCategoria = New System.Windows.Forms.TextBox()
         Me.txtNomeFornecedor = New System.Windows.Forms.TextBox()
         Me.txtNomeProduto = New System.Windows.Forms.TextBox()
+        Me.pnlApagar = New System.Windows.Forms.Panel()
+        Me.btnApagarLinha = New System.Windows.Forms.Button()
         CType(Me.dgvTeste1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -69,19 +71,20 @@ Partial Class Form1
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.pnlApagar.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -167,7 +170,7 @@ Partial Class Form1
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel3.Controls.Add(Me.RemoverSelecionado)
         Me.Panel3.Controls.Add(Me.txtRemoverSelecionado)
-        Me.Panel3.Location = New System.Drawing.Point(462, 20)
+        Me.Panel3.Location = New System.Drawing.Point(385, 20)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(269, 45)
         Me.Panel3.TabIndex = 9
@@ -442,12 +445,31 @@ Partial Class Form1
         Me.txtNomeProduto.TabIndex = 0
         Me.txtNomeProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'pnlApagar
+        '
+        Me.pnlApagar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.pnlApagar.Controls.Add(Me.btnApagarLinha)
+        Me.pnlApagar.Location = New System.Drawing.Point(674, 20)
+        Me.pnlApagar.Name = "pnlApagar"
+        Me.pnlApagar.Size = New System.Drawing.Size(137, 44)
+        Me.pnlApagar.TabIndex = 16
+        '
+        'btnApagarLinha
+        '
+        Me.btnApagarLinha.Location = New System.Drawing.Point(16, 11)
+        Me.btnApagarLinha.Name = "btnApagarLinha"
+        Me.btnApagarLinha.Size = New System.Drawing.Size(106, 23)
+        Me.btnApagarLinha.TabIndex = 0
+        Me.btnApagarLinha.Text = "Apagar Linha"
+        Me.btnApagarLinha.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1043, 804)
+        Me.Controls.Add(Me.pnlApagar)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)
@@ -476,6 +498,7 @@ Partial Class Form1
         Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        Me.pnlApagar.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -517,4 +540,6 @@ Partial Class Form1
     Friend WithEvents txtNomeFornecedor As TextBox
     Friend WithEvents txtNomeProduto As TextBox
     Friend WithEvents btnInserirDados As Button
+    Friend WithEvents pnlApagar As Panel
+    Friend WithEvents btnApagarLinha As Button
 End Class

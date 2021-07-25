@@ -200,4 +200,19 @@
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
+
+    Private Sub btnApagarLinha_Click(sender As Object, e As EventArgs) Handles btnApagarLinha.Click
+        Dim index As Integer = dgvTeste1.CurrentRow.Cells(0).RowIndex
+        Dim ChavePrimaria As Integer = dgvTeste1(0, index).Value
+        Dim obj As New Conectar
+
+        obj.SSQL = "DELETE FROM Produtos WHERE CódigoDoProduto =" + ChavePrimaria.ToString() + ";"
+
+
+        obj.BuscarDados()
+        dgvTeste1.DataSource = Nothing
+        dgvTeste1.Rows.Clear()
+        obj.SSQL = "Select * from Produtos"
+        dgvTeste1.DataSource = obj.BuscarDados()
+    End Sub
 End Class
