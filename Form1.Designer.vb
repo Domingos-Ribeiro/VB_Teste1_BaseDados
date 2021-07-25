@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvTeste1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscarProdutos = New System.Windows.Forms.Button()
         Me.btnLimparGrid = New System.Windows.Forms.Button()
@@ -74,14 +74,14 @@ Partial Class Form1
         'dgvTeste1
         '
         Me.dgvTeste1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTeste1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTeste1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTeste1.GridColor = System.Drawing.Color.CornflowerBlue
         Me.dgvTeste1.Location = New System.Drawing.Point(21, 71)
@@ -340,7 +340,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(451, 40)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Conta os Produtos Diferentes que estão na Base de Dados"
+        Me.Button1.Text = "Conta os Produtos na BD mas não conta os repetidos"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel8
@@ -374,7 +374,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(363, 80)
+        Me.Label4.Location = New System.Drawing.Point(375, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 17)
         Me.Label4.TabIndex = 1
@@ -384,11 +384,11 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(124, 80)
+        Me.Label3.Location = New System.Drawing.Point(91, 80)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 17)
+        Me.Label3.Size = New System.Drawing.Size(137, 17)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Categoria"
+        Me.Label3.Text = "Código da Categoria"
         '
         'Label2
         '
@@ -396,9 +396,9 @@ Partial Class Form1
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(327, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 17)
+        Me.Label2.Size = New System.Drawing.Size(149, 17)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Id do Fornecedor"
+        Me.Label2.Text = "Código do Fornecedor"
         '
         'Label1
         '
@@ -412,7 +412,7 @@ Partial Class Form1
         '
         'txtPreco
         '
-        Me.txtPreco.Location = New System.Drawing.Point(329, 101)
+        Me.txtPreco.Location = New System.Drawing.Point(341, 101)
         Me.txtPreco.Name = "txtPreco"
         Me.txtPreco.Size = New System.Drawing.Size(114, 20)
         Me.txtPreco.TabIndex = 0
@@ -420,17 +420,17 @@ Partial Class Form1
         '
         'txtCategoria
         '
-        Me.txtCategoria.Location = New System.Drawing.Point(49, 100)
+        Me.txtCategoria.Location = New System.Drawing.Point(91, 100)
         Me.txtCategoria.Name = "txtCategoria"
-        Me.txtCategoria.Size = New System.Drawing.Size(210, 20)
+        Me.txtCategoria.Size = New System.Drawing.Size(134, 20)
         Me.txtCategoria.TabIndex = 0
         Me.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtNomeFornecedor
         '
-        Me.txtNomeFornecedor.Location = New System.Drawing.Point(329, 35)
+        Me.txtNomeFornecedor.Location = New System.Drawing.Point(307, 35)
         Me.txtNomeFornecedor.Name = "txtNomeFornecedor"
-        Me.txtNomeFornecedor.Size = New System.Drawing.Size(114, 20)
+        Me.txtNomeFornecedor.Size = New System.Drawing.Size(183, 20)
         Me.txtNomeFornecedor.TabIndex = 0
         Me.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

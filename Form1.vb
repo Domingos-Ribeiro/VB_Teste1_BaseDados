@@ -159,8 +159,8 @@
 
         Dim obj As New Conectar
 
-        obj.SSQL = "Select distinct count(*) 
-                    From Produtos;"
+        obj.SSQL = "Select distinct count(NomeDoProduto) from Produtos;"
+
 
         dgvTeste1.DataSource = obj.BuscarDados()
 
@@ -173,8 +173,9 @@
 
     Private Sub btnInserirDados_Click(sender As Object, e As EventArgs) Handles btnInserirDados.Click
         Dim Descontinuado As Boolean = 1
-        Dim obj As New Conectar
-        obj.SSQL = "Insert into Produtos (NomeDoProduto, CódigoDoFornecedor, CódigoDaCategoria, PreçoUnitário, Descontinuado)
+        Try
+            Dim obj As New Conectar
+            obj.SSQL = "Insert into Produtos (NomeDoProduto, CódigoDoFornecedor, CódigoDaCategoria, PreçoUnitário, Descontinuado)
                         values ('" + txtNomeProduto.Text.ToString() +
                              "','" + txtNomeFornecedor.Text.ToString() +
                              "','" + txtCategoria.Text.ToString() +
@@ -182,17 +183,21 @@
                              "','" + Descontinuado.ToString() + "')"
 
 
-        obj.BuscarDados()
-        dgvTeste1.DataSource = Nothing
-        dgvTeste1.Rows.Clear()
-        obj.SSQL = "Select * from Produtos;"
-        dgvTeste1.DataSource = obj.BuscarDados()
+            obj.BuscarDados()
+            dgvTeste1.DataSource = Nothing
+            dgvTeste1.Rows.Clear()
+            obj.SSQL = "Select * from Produtos;"
+            dgvTeste1.DataSource = obj.BuscarDados()
 
-        MessageBox.Show("Dados Inseridos com Sucesso")
-
+            MessageBox.Show("Dados Inseridos com Sucesso")
+        Catch ex As Exception
+            MsgBox("Por favor verifique se os dados que introduziu estão corretos!")
+        End Try
         ' Verificar a conexão
 
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
+    End Sub
 End Class

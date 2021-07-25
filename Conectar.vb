@@ -14,6 +14,8 @@ Public Class Conectar
 
 
 
+
+
     Public Function BuscarDados() As DataTable
         Dim conexao As SqlConnection = New SqlConnection(StringConection)
         conexao.Open()
