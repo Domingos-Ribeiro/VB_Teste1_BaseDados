@@ -214,5 +214,6 @@
         dgvTeste1.Rows.Clear()
         obj.SSQL = "Select * from Produtos"
         dgvTeste1.DataSource = obj.BuscarDados()
+        'Para já funciona tudo
     End Sub
 End Class
