@@ -193,7 +193,7 @@
         Catch ex As Exception
             MsgBox("Por favor verifique se os dados que introduziu estão corretos!")
         End Try
-        ' Verificar a conexão
+
 
     End Sub
 
